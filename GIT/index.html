@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    this is new branch of login
     <h1> Step for using GIT</h1>
     <ol>
         <li>git init -> it will make a hidden git file in your project folder</li>
@@ -17,6 +18,9 @@
         intermediate area between your online git repo and local files.
         <li> git status -> this tells you the status of you local files</li>
         // .gitignore file is used to except some file which you do not want to add to your repository
+        <li> git remote add  origin URL -> this connect your local git to Online git</li>
+        <li> git push -u origin master -> this will push your code to the online repository</li>
+        <li> git push -f origin master -> this command is used if git rejects above command</li>
     </ol>
 /********************************** Branches ************************************/
  // Branches are used if there are many developers and if they do not want to push the code for main project repository 
@@ -31,6 +35,8 @@
         // after that if you need to merge the master and name_of_branch the use
         1. first comeback to master branch as you need to merge with master branch
         2. git merge name_of_branch - >this will merge all the code of master branch and name_of_branch together to master
+        remember to commit both the branches to merge the code of both the branches 
+    
     </ol>
 </body>
 </html>
