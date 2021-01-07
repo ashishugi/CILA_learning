@@ -1,0 +1,16 @@
+1.Can be used with CDN link also.
+2.Light weight 18 - 25 kb.
+3.Vue can be used with CLI and laravel. but CLI is preferred.
+4.CLI cannot be used with CDN.
+
+############  Working with CLI ##############
+1.install npm
+2.install nodeJs
+3.install vue/CLI :sudo npm install -g @vue/cli
+
+########## Creating vue project ##################
+1.vue create project_name
+2.Select default and npm
+
+########## working with CDN #############
+1.<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
