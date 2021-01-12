@@ -48,9 +48,7 @@
                <th>SNO</th>
                <th>Fruit Name</th>
             </tr>
-            <fruitTable v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> 
-               {{x.name}}
-            </fruitTable>
+            <tr is="fruitTable" v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> </tr>
        </table>
     </div>
     <script>
