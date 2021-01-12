@@ -1,0 +1,28 @@
+##############################################################################
+
+1. vetur - > install this for making the vue code heightlighter .
+
+
+#########################  CLICK EVENT #################################
+1. using method in Components
+<template>
+    <div>
+        <h1>this is Home component</h1>
+        <h2>{{data}}</h2>
+        <button v-on:click="hello">CLIck </button>
+    </div>
+    
+</template>
+<script>
+export default {
+    name:'Home',
+    props:{
+        data:String 
+    },
+    methods:{
+        hello(){
+            alert("hello");
+        }
+    }
+}
+</script>

@@ -6,6 +6,7 @@
 ############  Working with CLI ##############
 1.install npm
 2.install nodeJs
+3.sudo npm install -g npm // to update npm
 3.install vue/CLI :sudo npm install -g @vue/cli
 
 ########## Creating vue project ##################

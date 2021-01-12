@@ -49,7 +49,7 @@
                <th>Fruit Name</th>
             </tr>
             <fruitTable v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> 
-                {{x.name}}
+               
             </fruitTable>
        </table>
     </div>
@@ -70,6 +70,10 @@
             }
         })
         //**************************************** from here *************************
+        Vue.component('fruitTable',{
+            props:['fruit'],
+            template:'<tr>{{fruit.name}}</tr>'
+        })
         var ob3 = new Vue({
             el:'#fruitTable',
             data:{
@@ -81,10 +85,6 @@
                     {id:4,name:"Pine Apple"}
                 ]
             }
-        })
-        Vue.component('fruitTable',{
-            props:['fruit'],
-            template:'<tr>{{fruit.name}}</tr>'
         })
         var ob2 = new Vue({
             el:'#form',
