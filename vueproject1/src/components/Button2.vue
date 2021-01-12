@@ -1,11 +1,14 @@
 <template>
     <div>
+        <h3  v-bind:style="{color:'blue'}"> This is the element used to making VUE style</h3>
+        <h2 v-bind:class="{display:show}"> This is the element used to making CLASS VUE style</h2>
+
         <h3 v-if="flag">This is a toggling element if condition</h3>
         <h3 v-else>This is a toggling element else condition</h3>
         <span v-for="x in cars" v-bind:key="x">
             {{x}}
         </span>
-        <button class="btn" v-on:click="toogle">
+        <button v-bind:disabled="false" class="btn" v-on:click="toogle">
             Toogle
         </button>
     </div>
@@ -19,6 +22,7 @@ export default {
     data(){
         return {
             flag :true,
+            show:true,
             cars:[
                 "Tata","Ford","Toyota","BMW"
             ]
@@ -39,5 +43,8 @@ export default {
         border:0.5px solid black;
         border-radius:5px;
         font-size:18px;
+    }
+    .display{
+        background-color: blueviolet;
     }
 </style>

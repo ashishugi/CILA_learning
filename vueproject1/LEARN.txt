@@ -26,3 +26,16 @@ export default {
     }
 }
 </script>
+
+###########################  Style with Vue style components ##############################
+<h2 v-bind:class="{display:show}"> This is the element used to making CLASS VUE style</h2>
+<h2 v-bind:class="[display  ,btn ]"> This is the element used to making CLASS VUE style</h2>
+    // here in this display property will work iff show is true
+<style>
+    .display{
+        background-color: blueviolet;
+    }
+    .btn{
+
+    }
+</style>

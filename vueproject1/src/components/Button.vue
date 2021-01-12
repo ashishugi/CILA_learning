@@ -12,7 +12,6 @@ export default {
         name:String
     },
 }
-
 </script>
 <style scoped>
     .btn{

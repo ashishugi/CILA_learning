@@ -41,7 +41,7 @@
             </todo-item>
     </div>
     <!--*********************** This is the components Part ****************** -->
-    <div id="fruitTable">
+    <div id="fruitTable1">
         {{message}}
        <table>
             <tr>
@@ -49,7 +49,7 @@
                <th>Fruit Name</th>
             </tr>
             <fruitTable v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> 
-               
+               {{x.name}}
             </fruitTable>
        </table>
     </div>
@@ -72,10 +72,10 @@
         //**************************************** from here *************************
         Vue.component('fruitTable',{
             props:['fruit'],
-            template:'<tr>{{fruit.name}}</tr>'
+            template:'<div><tr>{{fruit.name}}</tr></div>'
         })
         var ob3 = new Vue({
-            el:'#fruitTable',
+            el:'#fruitTable1',
             data:{
                 message:"this",
                 fruits:[
