@@ -48,9 +48,7 @@
                <th>SNO</th>
                <th>Fruit Name</th>
             </tr>
-            <fruitTable v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> 
-               {{x.name}}
-            </fruitTable>
+            <tr is="fruitTable" v-for="x in fruits" v-bind:fruit="x" v-bind:key="x.id"> </tr>
        </table>
     </div>
     <script>
@@ -72,7 +70,7 @@
         //**************************************** from here *************************
         Vue.component('fruitTable',{
             props:['fruit'],
-            template:'<div><tr>{{fruit.name}}</tr></div>'
+            template:'{{fruit.name}}'
         })
         var ob3 = new Vue({
             el:'#fruitTable1',

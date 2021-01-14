@@ -39,3 +39,132 @@ export default {
 
     }
 </style>
+
+
+#############################  Props  (Parent to Child) ########################
+1.
+{
+    props:{
+        name:String
+    }
+}
+
+2. for sending the props use 
+        <Home v-bind:name="name"> </Home>
+
+
+
+        {
+            props:{
+                name:"write value here"
+            }
+        }
+
+Home.vue :
+_______________________
+
+        <template>
+            <div>
+                <h1>{{name}}</h1>
+            </div>
+        </template>
+
+        <script>
+            export default{
+                props:{
+                    name:String
+                }
+            }
+        </script>
+
+Examples : 
+App.vue :
+____________________ 
+        <Child v-bind:age="age" v-bind:vegi="vegi" name="Peter"></Child>
+
+        export default {
+        components: {
+            Child
+        },
+        data(){
+            return {
+            vegi:[
+                {id:0 , name:"Brinjal"},
+                {id:1 , name:"Onion"},
+                {id:2 , name:"Potato"},
+            ]
+            }
+        }
+        }
+
+Child.vue :
+____________________ 
+        <template>
+            <div>
+                <h3 v-for="x in vegi" v-bind:key="x.name">
+                    {{x.id}} {{x.name}}
+                </h3>
+            </div>
+        </template>
+        <script>
+        export default {
+            name:'Child',
+            props:{
+                name:String,
+                age:Number,
+                vegi:Array,
+            }
+        }
+        </script>
+
+########################## Props (Child to Parent) ###############
+1.Child1.vue
+______________________
+
+    <template>
+        <div>
+            <button v-on:click="updateTitle">
+                Update Parent Title
+            </button>
+        </div>
+    </template>
+    <script>
+    export default {
+        name:'Child1',
+        methods:{
+            updateTitle : function(){
+                this.$emit('changeTitle',"this the new string"); // event to fire , data to transfer 
+            }
+        }
+    }
+    </script>
+
+App.vue
+______________________
+
+<template>
+  <div id="app">
+    <h1>{{ParentTitle}}</h1>
+    <Child1 v-on:changeTitle="updateTitle($event)"></Child1>
+  </div>
+</template>
+
+<script>
+import Child1 from "./components/Child1.vue";
+export default {
+  name: 'App',
+  components: {
+    Child1,
+  },
+  data(){
+    return {
+      ParentTitle:"THis was the Title",
+    }
+  },
+  methods:{
+    updateTitle(title){
+      this.ParentTitle = title
+    }
+  }
+}
+</script>   

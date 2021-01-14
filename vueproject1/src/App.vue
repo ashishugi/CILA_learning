@@ -15,6 +15,11 @@
       </tr>
       <Table></Table>
     </table>
+    <Child v-bind:age="age" v-bind:vegi="vegi" name="Peter"></Child>
+    <h1>{{ParentTitle}}</h1>
+    <Child1 v-on:changeTitle="updateTitle($event)"></Child1>
+    <h3>{{status}}</h3>
+    <login v-on:login="login($event)" v-bind:status="status">{{status}}</login>
   </div>
 </template>
 
@@ -25,6 +30,9 @@ import Table from "./components/Table.vue"
 import Home from './components/Home.vue'
 import Button2 from "./components/Button2.vue"
 import Navbar from "./components/Navbar"
+import Child from "./components/Child.vue"
+import Child1 from "./components/Child1.vue";
+import login from "./components/login";
 export default {
   name: 'App',
   components: {
@@ -33,7 +41,30 @@ export default {
     Home,
     Button2,
     Table,
-    Navbar
+    Navbar,
+    Child,
+    Child1,
+    login
+  },
+  data(){
+    return {
+      age:11,
+      vegi:[
+        {id:0 , name:"Brinjal"},
+        {id:1 , name:"Onion"},
+        {id:2 , name:"Potato"},
+      ],
+      ParentTitle:"THis was the Title",
+      status:'login'
+    }
+  },
+  methods:{
+    updateTitle(title){
+      this.ParentTitle = title
+    },
+    login(value){
+      this.status = value;
+    }
   }
 }
 </script>
