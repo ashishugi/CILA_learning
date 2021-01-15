@@ -20,6 +20,7 @@
     <Child1 v-on:changeTitle="updateTitle($event)"></Child1>
     <h3>{{status}}</h3>
     <login v-on:login="login($event)" v-bind:status="status">{{status}}</login>
+    <Form></Form>
   </div>
 </template>
 
@@ -33,11 +34,13 @@ import Navbar from "./components/Navbar"
 import Child from "./components/Child.vue"
 import Child1 from "./components/Child1.vue";
 import login from "./components/login";
+import Form from "./components/Form";
 export default {
   name: 'App',
   components: {
     // HelloWorld,
     Button,
+    Form,
     Home,
     Button2,
     Table,

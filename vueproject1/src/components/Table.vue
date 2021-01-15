@@ -1,6 +1,6 @@
 <template>
     <div>
-        <tr v-bind:class="{display:true}" v-for="x in fruits" v-bind:key="x">
+        <tr v-bind:class="{display:true}" v-for="x in fruits" v-bind:key="x.id">
             {{x.id}} {{x.name}}
         </tr>
     </div>
