@@ -18,10 +18,18 @@ export default {
            }
         }
     },
+    beforeCreated(){
+        console.log("Before is called");
+        console.log(this.$el);
+    },
+    created(){
+        console.log("Created Function is called");
+        console.log(this.$el);
+    },
     methods:{
         login(){
             console.warn(this.user)
-        }
+        },
     }
 }
 </script>

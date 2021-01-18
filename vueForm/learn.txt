@@ -1,2 +1,13 @@
 1.Form and validations
 2.Filter
+
+################ 
+1. beforeCreate() : this function is called when vue() instance is going to be 
+created.
+2.create() : this function is called after the vue () instance is created;
+3.beforeMount() : this function is called when before the Html is going to be rendered
+4.Mounted() : is called after the Html is rendered.
+ // mounted() is used to modify the html element.
+
+ 5.beforeDestroy():this function is called just before every element of the web is going to be destroyed.
+ 6.Destroy(): //this function is called just after the things gets destroyed.
