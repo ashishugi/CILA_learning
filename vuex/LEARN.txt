@@ -1,0 +1,49 @@
+Vuex -> state management pattern + library
+1.Installing Vuex
+    npm install vuex --save
+
+2. Include in the library
+    import Vue from 'vue'
+    import Vuex from 'vuex'
+
+    Vue.use(Vuex)
+3. Sample Explaination 
+Vue instance						
+    const vue = new Vue({
+        data(){
+            ...
+    },
+        methods:{
+        …. 
+    },
+        computed:{
+        … this can access data()
+        },
+
+    })
+Vue store
+    const store = new Vuex.Store({
+        state(){
+            ...// has state
+    },
+        mutations:{
+        // this will be used to modify state. 
+        }
+        actions:{
+        …. 
+    },
+        getter:{
+        … this can access state
+        },
+
+    })
+
+data  === state
+methods === actions
+computed  === getter
+
+Here is mutation is just used to change the state
+
+actions => mutations => state (and state gets changed)
+
+
