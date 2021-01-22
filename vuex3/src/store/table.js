@@ -1,0 +1,20 @@
+const state = {
+    content:[
+        {
+            id:1,
+            name:'Adikshit'
+        },
+        {
+            id:2,
+            name:'Kuldeep'
+        },
+        {
+            id:3,
+            name:'mixer'
+        },
+        {
+            id:4,
+            name:'Boat'
+        },
+    ]
+}
