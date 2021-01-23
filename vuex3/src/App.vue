@@ -1,15 +1,19 @@
 <template>
   <div id="app">
     hi
+    <Content></Content>
+    <ApiContents></ApiContents>
   </div>
 </template>
 
 <script>
-
+import Content from "./components/Content.vue"
+import ApiContents from "./components/ApiContents";
 export default {
   name: 'App',
   components: {
-    
+    Content,
+    ApiContents
   },
 }
 </script>
