@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@1.15.1/dist/quasar.min.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div id="q-app">
+            <div class="q-pa-md">
+                <q-layout view="lHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders">
+                      <q-header elevated class="bg-cyan-8">
+                        <q-toolbar>
+                          <q-toolbar-title>Header</q-toolbar-title>
+                          <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+                        </q-toolbar>
+                      </q-header>
+                    <q-drawer
+                      v-model="drawer"
+                      show-if-above
+                      :width="200"
+                      :breakpoint="400"
+                    >
+                </q-layout>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@^2.0.0/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@1.15.1/dist/quasar.umd.min.js"></script>
+    
+    <script>
+      new Vue({
+        el: '#q-app',
+        data: function () {
+          return {
+            version: Quasar.version
+          }
+        },
+        methods: {
+            notify: function () {
+                this.$q.notify('Running on Quasar v' + this.$q.version)
+        }       
+        },
+      })
+    </script>
+  </body>
+</html>
