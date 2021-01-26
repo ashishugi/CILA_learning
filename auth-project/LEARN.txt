@@ -1,0 +1,52 @@
+Vue Router
+1.Install vue routing package
+    npm install vue-router
+2.Including routing in App.vue
+
+Main.Js
+    import VueRouter from 'vue-router'
+    import About from "./components/About";
+    import Home from "./components/Home.vue";
+    ## all files included
+    
+    Vue.use(VueRouter); // to use VueRouter
+    const routes=[ // Array of All the paths
+    {path:'/',component:Home}, // path in url , component it will call
+    {path:'/about',component:About}
+    ]
+    ## making new variable for router
+    const router = new VueRouter({
+        routes
+    })
+    ## using name in new Vue object
+    new Vue({
+        router:router, // name to be used in other pages or components
+        render: h => h(App),
+    }).$mount('#app')
+
+App.vue
+    <template>
+    <div id="app">
+        <router-view></router-view> // tag used to enable routing 
+    </div>
+    </template>
+
+3.Anchor tag (href)
+
+    <template>
+    <div id="app">
+        <nav>
+        <ul>
+            <li> <router-link to="/">Home</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
+            <li>About</li>
+        </ul>
+        </nav>
+        <router-view></router-view>
+    </div>
+    </template>
+
+Here we have to use router-link tag to redirect instead of
+href as if we use href the whole page will be redirected which
+we do not want a we are looking out for the single page 
+application which do not render full page

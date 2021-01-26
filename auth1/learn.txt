@@ -1,0 +1,4 @@
+1.vue create app_name
+2.vue add router
+3.npm install vuex axios - > axios is used for the case of API like GET , POST
+4.npm install --save vuex-persistedstate - >  a library that saves our Vuex data between page reloads.
