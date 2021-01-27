@@ -1,4 +1,4 @@
-import axios from "vue-axios";
+import axios from "axios";
 
 const state={
     users:null,
@@ -18,7 +18,7 @@ const actions={
         // Next, we will be dispatching our form username and password to our login action
         await dispatch('LogIn', UserForm); // this will carry our form data to login page and redirect to login page
     },
-    async LoginIn({commit},User){
+    async LogIn({commit},User){
         //When a user fills in their username and password, 
         //it is passed to a User which is a FormData object,
          //the LogIn function takes the User object and makes a POST request to the /login endpoint to log in the user.
@@ -45,10 +45,10 @@ const actions={
 }
 const mutations={
     setUser(state,Username){
-        state.user = username;
+        state.user = Username;
     },
     setPosts(state,posts){
-        state.post = data;
+        state.post = posts;
     },
     LogOut(state){
         state.user=null,
