@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    hi
+    hi this is app.vue page
     <Navbar></Navbar>
     <router-view></router-view>
   </div>

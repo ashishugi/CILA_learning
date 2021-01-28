@@ -23,6 +23,8 @@ const actions={
         //it is passed to a User which is a FormData object,
          //the LogIn function takes the User object and makes a POST request to the /login endpoint to log in the user.
         await    axios.post('login',User);
+        console.log("here");
+        console.log(User);
         await commit('setUser',User.get('username'));
     },
     async CreatePost({dispatch},post){ // Our CreatePost action is a function,
